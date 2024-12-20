@@ -1,0 +1,132 @@
+/* --------- Modo Escuro --------- */
+.dark-mode * {
+    border-color: #3B87B0;
+}
+
+body.dark-mode {
+    background-color: #080C17 ; /* Fundo escuro */
+    color: white;    
+}
+
+body.dark-mode .workarea {
+
+}
+
+body.dark-mode .header,
+body.dark-mode .cvs-title, body.dark-mode .cvs-subtitle_csv {
+	color: #3B87B0;
+}
+
+body.dark-mode div.header {
+	color: #3B87B0;
+}
+
+body.dark-mode .theme-toggle {
+    box-shadow: 0 0 0.4rem rgba(173, 255, 47, 0.7);
+    background-color:rgb(219, 219, 219, 0.8);
+}
+
+body.dark-mode .theme-toggle label {
+ color: navy;
+}
+
+/* --- Filtro Reutilizável --- */
+
+
+/* --- Selects --- */
+body.dark-mode select {
+    border-color: greenyellow;
+	background-color: #2c324c;
+    color: inherit;
+}
+/* Estilo quando o usuário passa o cursor (hover) */
+body.dark-mode select.dark-mode:hover {
+    border-color: inherit; /* Cor da borda ao passar o mouse */
+    background-color: #f0f8ff; /* Cor de fundo clara ao passar o mouse */
+    color: #007bff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo quando o select recebe foco (focus) */
+body.dark-mode select:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #007bff; /* Cor da borda ao focar */
+    background-color: #e6f0ff; /* Cor de fundo ao focar */
+    color: #007bff; /* Cor do texto ao focar */
+}
+
+/* Estilo para o select quando está desabilitado */
+body.dark-mode select:disabled {
+    background-color: #f9f9f9; /* Cor de fundo para quando o select estiver desabilitado */
+    border-color: #ddd; /* Cor da borda quando desabilitado */
+    color: #aaa; /* Cor do texto quando desabilitado */
+    cursor: not-allowed; /* Cursor indicando que não pode interagir */
+}
+
+body.dark-mode select option {
+    color: #000; /* Cor do texto das opções */
+    background-color: #fff; /* Cor de fundo das opções */
+}
+
+body.dark-mode .card-container, body.dark-mode .card-container-detalhes,
+.cvs-container {
+    background-color: rgb(25, 27, 30);
+    box-shadow: 0 0 0.7rem rgba(173, 255, 47, 0.5);
+}
+body.dark-mode .card-box {
+    background-color: black;
+    box-shadow: 0 0 0.4rem rgba(255, 255, 255, 0.4);
+}
+
+body.dark-mode .title-entidade {
+    color: #3B87B0;
+}
+
+body.dark-mode .card-toque {
+    background-color:#1c2327;
+    box-shadow: 0 0 0.3rem rgba(173, 255, 47, 0.5);
+}
+
+body.dark-mode .title-toque {
+    color: #ffd700;
+}
+
+/*--------- Área do Botão ---------*/
+
+body.dark-mode .btn_reset {
+    
+}
+
+
+/* --- Botão de Scroll Return --- */
+body.dark-mode .btn_normal, body.dark-mode .btn_reset, body.dark-mode .btn_seta_top {
+    border: solid 2px;
+    border-color:#2c324c;
+    background-color: rgba(59, 135, 176, 0.7); /* Aumenta a opacidade no hover */
+    color: white; /* Cor da seta */
+    box-shadow: 0 0 0.05rem rgba(255, 255, 255, 0.4);
+}
+
+body.dark-mode .btn_reset:hover, body.dark-mode .btn_normal:hover, body.dark-mode .btn_seta_top:hover {
+    background-color: rgba(59, 135, 176, 1); /* Fundo azul com transparência */
+    background-color: #003f7e;
+}
+
+body.dark-mode .btn_seta_top {
+    background-color: rgba(59, 135, 176, 0.7); /* Aumenta a opacidade no hover */
+    color: greenyellow;
+}
+
+/*--------- Página do conversor ---------*/
+
+
+body.dark-mode .cvs-btn_colar, body.dark-mode .cvs-btn_limpar,
+body.dark-mode .cvs-btn_converter, body.dark-mode .cvs-btn_copiar,
+body.dark-mode .cvs-btn_processar
+{
+    border: solid 2px;
+    border-color:#2c324c;
+    background-color: rgba(0, 0, 128, 0.7); /* Aumenta a opacidade no hover */
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+    color: white;
+}
+

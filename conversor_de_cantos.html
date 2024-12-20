@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style-light.css"/>
+	<link rel="stylesheet" type="text/css" href="style-dark.css"/>
+    <title>Conversor de Cantos</title>
+</head>
+<body>
+    <div class ="workarea">
+		<div class="top-banner">
+			<img src="images/Banner_EA.png" class="img-top-banner">
+		</div>
+		
+	
+		<!------ Header Area ------>	
+		<div class="header">
+			<h2 class="">Encantarias</h2>
+
+				<!-- Controles de alternância entre os temas -->
+				<div class="theme-toggle">
+					<label>
+						<input type="radio" name="theme" value="light-mode" id="lightMode" />
+						Claro
+					</label>
+					<label>
+						<input type="radio" name="theme" value="dark-mode" id="darkMode" />
+						Escuro
+					</label>
+				</div>
+		</div>
+
+        <!-- Conversor Section -->
+        <div class="cvs-container">
+            <div class="cvs-section_manual">
+                <h1 class="cvs-title">Conversor de Cantos</h1>
+                <div class="cvs-subtitle">Encantos da Alma</div>
+                    <textarea id="inputText" placeholder="Cole sua letra aqui..."></textarea>
+
+                    <div class="cvs-btn_row">
+                        <button id="pasteButton" class="cvs-btn_colar">Colar</button>
+                        <button id="clearButton" class="cvs-btn_limpar">Limpar</button>
+                    </div>
+
+                    <button id="convertButton" class="cvs-btn_converter cvs_btn_centro">Converter</button>
+
+                    <input type="text" id="outputText" placeholder="Saída convertida aparecerá aqui..." readonly>
+
+                    <button id="copyButton" class="cvs-btn_copiar cvs-btn_centro">Copiar</button>
+                    <div id="messageLabel" class="message"></div>
+                </div>                       
+                
+                <!-- Seção de importação e exportação de CSV -->
+                <div class="cvs-section">
+                    <hr class="cvs-separator-line">
+                        <h4 class="cvs-subtitle_csv">Conversão em Lote (CSV)</h4>
+                        <input type="file" id="csvImportButton" accept=".csv">
+
+                        <button id="processCSVButton" class="cvs-btn_processar cvs-btn_centro">Processar CSV</button>
+
+                        <!-- Mensagem de Status CSV -->
+                        <div id="csvMessage" class="cvs-message"></div>
+                </div>
+            
+        </div>
+    </div>
+
+    <script src="tools.js"></script>
+    <script src="conversor_de_cantos.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style-light.css"/>
+	<link rel="stylesheet" type="text/css" href="style-dark.css"/>
+    <title>Conversor de Cantos</title>
+</head>
+<body>
+    <div class ="workarea">
+		<div class="top-banner">
+			<img src="images/Banner_EA.png" class="img-top-banner">
+		</div>
+		
+	
+		<!------ Header Area ------>	
+		<div class="header">
+			<h2 class="">Encantarias</h2>
+
+				<!-- Controles de alternância entre os temas -->
+				<div class="theme-toggle">
+					<label>
+						<input type="radio" name="theme" value="light-mode" id="lightMode" />
+						Claro
+					</label>
+					<label>
+						<input type="radio" name="theme" value="dark-mode" id="darkMode" />
+						Escuro
+					</label>
+				</div>
+		</div>
+
+        <!-- Conversor Section -->
+        <div class="cvs-container">
+            <div class="cvs-section_manual">
+                <div class="csv-btn_tabs">
+                    <button class="tablink" onclick="openPage('Conversor', this)" id="defaultOpen">Conversor</button>
+                    <button class="tablink" onclick="openPage('Csv', this)">Conversor Csv</button>
+                    <button class="tablink" onclick="openPage('CsvToJson', this)">Popular Json</button>
+                    <button class="tablink" onclick="openPage('JsonToCsv', this)">Popular CSV</button>
+
+                </div>
+                
+                    <div id="Conversor" class="tabcontent">
+                        <div class="cvs-content">
+                            <h1 class="cvs-title">Conversor de Encantarias</h1>
+                            <div class="cvs-subtitle">Encantos da Alma</div>
+                            <textarea id="inputText" placeholder="Cole sua letra aqui..."></textarea>
+        
+                            <div class="cvs-btn_row">
+                                <button id="pasteButton" class="cvs-btn_colar cvs-btn_pequeno">Colar</button>
+                                <button id="clearButton" class="cvs-btn_limpar cvs-btn_pequeno">Limpar</button>
+                            </div>
+        
+                            <button id="convertButton" class="cvs-btn_converter cvs-btn_centro">Converter</button>
+        
+                            <input type="text" id="outputText" placeholder="Saída convertida aparecerá aqui..." readonly>
+        
+                            <button id="copyButton" class="cvs-btn_copiar cvs-btn_centro">Copiar</button>
+                            <div id="messageLabel" class="cvs-message"></div>
+                        </div>
+                        
+            
+                    </div>
+                    
+                    <div id="Csv" class="tabcontent">
+                        <!-- Seção de importação e exportação de CSV -->
+                        <div class="cvs-section">
+                            <h1 class="cvs-title">Conversão em Lote (CSV)</h1>
+                                <input type="file" id="csvImportButton" accept=".csv">
+    
+                                <button id="processCSVButton" class="cvs-btn_processar cvs-btn_centro">Processar CSV</button>
+
+                                <pre id="outputCsv" style="white-space: pre-line; text-align: justify; background: #f4f4f4; padding: 10px; border: 1px solid #ccc; max-height: 400px; overflow-y: scroll;"></pre>
+
+                                <a id="cvs-csv_downloadLink" style="display: none;">Baixar JSON Atualizado</a>
+
+                                <!-- Mensagem de Status CSV -->
+                                <div id="csvMessage" class="cvs-message"></div>    
+                        </div>
+                    </div>
+                    
+                    <div id="CsvToJson" class="tabcontent">
+                        <!-- Seção de importação e exportação de CSV -->
+                        <div class="cvs-section">
+                            <h1 class="cvs-title">CSV para Json</h1>
+                            <label for="jsonInput">Carregar JSON:</label>
+                            <input type="file" id="jsonInput" accept="application/json">
+                        
+                            <label for="csvInput">Carregar CSV:</label>
+                            <input type="file" id="csvInput" accept=".csv"><br><br>
+                        
+                            <button id="cvs-csvToJson" class="cvs-btn_processar cvs-btn_centro">Processar e Mesclar</button>
+                        
+                            <pre id="output" style="white-space: pre-line; text-align: justify; background: #f4f4f4; padding: 10px; border: 1px solid #ccc; max-height: 400px; overflow-y: scroll;"></pre>
+                        
+                            <a id="downloadLink" style="display: none;">Baixar JSON Atualizado</a>
+    
+                                <!-- Mensagem de Status CSV -->
+                                <div id="csvToJsonMessage" class="cvs-message"></div>
+                        </div>
+                    </div>
+
+                    <div id="JsonToCsv" class="tabcontent">
+                        <!-- Seção de importação e exportação de CSV -->
+                        <div class="cvs-section">
+                            <h1 class="cvs-title">Json para Csv</h1>
+                            <label for="jsonToCsvInput">Carregar JSON:</label>
+                            <input type="file" id="jsonToCsvInput" accept="application/json">
+                        
+                            <button id="generateCSVButton" class="cvs-btn_processar cvs-btn_centro">Gerar CSV</button>
+
+                            <pre id="outputJsonToCsv" style="white-space: pre-line; text-align: justify; background: #f4f4f4; padding: 10px; border: 1px solid #ccc; max-height: 400px; overflow-y: scroll;"></pre>
+                        
+                            <a id="cvs-json_to_csv_downloadLink" style="display: none;">Baixar CSV</a>
+    
+                                <!-- Mensagem de Status CSV -->
+                                <div id="jsonToCsvMessage" class="cvs-message"></div>    
+                        </div>
+                    </div>
+                
+                
+            </div>           
+                  
+        </div>
+    </div>
+
+    <script src="tools.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="conversor.js"></script>
+</body>
+</html>

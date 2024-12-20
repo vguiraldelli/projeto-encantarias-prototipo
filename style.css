@@ -1,0 +1,664 @@
+/* --- Estilo Global --- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, 'Poppins', sans-serif;
+	letter-spacing: 0.5px;
+	border-color: navy;
+
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave entre os modos */
+}
+
+/* --- Estrutura Geral --- */
+.workarea {
+    max-width: inherit;
+    width: 100%;
+	margin: auto;
+	width: 99%;
+	border: 2px solid;
+	padding: 0px;
+}
+
+.top-banner {
+	display: flex;
+}
+.img-top-banner {
+	width: 100%;
+	height: auto;
+}
+
+.img-top-banner {
+	box-shadow: 0 0 5px 2px rgba(0, 0, 128, 0.5); /* Sombras para foco */
+}
+
+/* --------- Estilos diversos --------- */
+
+.header {
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	padding: 5px 30px;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
+
+
+/* ------ Estilo do Radio Button de alterar tema ------ */
+/* Estilo para a área de alternância */
+.theme-toggle {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    align-items: center;
+    margin-left: auto; /* Empurra para a direita */
+    font-size: 14px;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+.theme-toggle label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+	color: inherit;
+}
+
+.theme-toggle input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 50%;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo ao selecionar o tema */
+.theme-toggle input[type="radio"]:checked {
+    background-color: #3B87B0; /* Cor preenchida quando selecionado */
+    border-color: navy;
+}
+
+.theme-toggle label:hover input[type="radio"] {
+    border-color: darkblue; /* Cor da borda ao passar o mouse */
+}
+
+
+/* --- Filtro Reutilizável --- */
+.filter {
+	border-top: 3px double;
+	border-bottom: 3px double;
+	margin: 1px auto;
+	padding: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap; /* Permite os itens se ajustarem em várias linhas */
+	row-gap: 2px;
+}
+
+/* Estilos base para o select */
+
+/* Centraliza o texto do primeiro item e alinha no dropdown */
+select {
+    text-align: left; /* Texto padrão alinhado à esquerda */
+    text-align-last: center; /* Centraliza o texto no dropdown */
+	
+}
+
+/* Centralizar a primeira opção (título) */
+.select option:first-child {
+    text-align: center;  /* Centraliza o texto da primeira opção */
+    font-weight: bold;   /* (opcional) Torna o texto mais destacado */
+}
+
+/* Outros estilos do select para manter o estilo geral */
+.select {
+	min-width: 200px;
+	width: 200px;
+    max-width: 200px;
+	max-height: 35px;
+	font-size: 1rem;
+	font-weight: bold;
+	border: 2px solid; /* Adiciona a borda navy aos selects */
+	border-radius: 50px; /* Arredonda as bordas */
+	padding: 5px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 128, 0.5); /* Sombras para foco */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	appearance: none;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_reset {
+	min-width: 200px;
+	width: 200px;
+    max-width: 200px;
+	min-height: 35px;
+	height: 35px;
+	max-height: 35px;
+	padding: 5px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	border: 2px solid;
+	
+	box-shadow: 0 0 5px 2px rgba(0, 0, 128, 0.5); /* Sombras para foco */
+}
+
+/* --------- Área Central --------- */
+.container {
+	max-width: 98%;
+	margin: 10px auto;
+	padding: 5px;
+	border-radius: 25px;
+	justify-self: center;
+}
+
+/* --- Galeria --- */
+
+.gallery {
+    width: 100%;
+    max-width: inherit;
+}
+
+/* Estilos específicos de elementos */
+.card-container, .container-letra, .card-container-detalhes {
+    background-color: inherit; /* Adapta-se ao modo ativo */
+    color: inherit;
+}
+
+/* --------- Área do Card dos Cantos --------- */
+.card-container {
+	width: 480px;
+    min-width: 30%;
+    max-width: 480px;
+	margin: 10px auto;
+	padding: 30px;
+	box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+	border-radius: 25px;
+	display:flex;
+	flex-direction: column;
+}
+
+/* .card-container-detalhes {
+	width: 1000px;
+    min-width: 30%;
+    max-width: inherit;
+	margin: 10px auto;
+	padding: 30px;
+	box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+	border-radius: 25px;
+} */
+
+/* Centraliza o card-container-detalhes dentro do seu pai */
+.card-container-detalhes {
+    margin: auto; /* Centraliza horizontalmente */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Certifica-se de que o conteúdo fique em coluna */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    max-width: 100%; /* Evita que ultrapasse a tela */
+    width: 1000px;
+    min-width: 30%;
+	padding: 30px;
+	box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+	border-radius: 25px;
+}
+
+.card-content{
+	max-width:fit-content;
+	display:flex;
+	flex-direction: column;
+}
+
+.title-container {
+	max-width: inherit;
+    width: 100%;
+	max-height: fit-content;
+    margin-bottom: 10px;
+	gap: 5px;
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Certifica-se de que o conteúdo fique em coluna */
+
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    max-width: 100%; /* Evita que ultrapasse a tela */
+    
+}
+
+.title-entidade {
+    max-width: inherit;
+    width: fit-content;
+	text-decoration: underline;
+	color: navy;
+    overflow-wrap: break-word;
+}
+.subtitle-entidade {
+	max-width: inherit;
+    width: fit-content;
+	color: #6f42c1;
+    overflow-wrap: break-word;
+}
+.title-titulo {
+	margin-top: 2px;
+	max-width: inherit;
+    overflow-wrap: break-word;
+
+}
+
+.card-toque {
+    display: inline-block;
+    
+    padding: 8px;
+    margin: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title-toque {
+    max-width: inherit;
+    width: fit-content;
+	font-style: italic;
+	margin-top: 4px;
+    overflow-wrap: break-word;
+}
+
+.toque-card:hover {
+    background-color: #ddd;
+}
+
+
+h1.center {
+	text-align: center;
+}
+
+.card-box {
+    width: auto; /* Garante que a largura seja ajustada ao conteúdo */
+    max-width: 100%; /* Ajuste máximo para evitar que o conteúdo ultrapasse o tamanho da tela */
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 10px;
+    
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: center;
+    display: inline-block; /* Para garantir que a largura se ajuste ao conteúdo */
+	
+}
+
+.container-letra {
+    margin-bottom: 0px;
+}
+
+
+.my-div, .my-div-norepit, .letra {
+	line-height: 18px;
+}
+
+.my-div-norepit {
+	margin-bottom: 12px;
+}
+
+.letra {
+	text-align: justify;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.container-repeticao {
+    display: flex;
+    align-items: stretch; /* Faz com que os elementos filhos tenham a mesma altura */
+    margin-bottom: 25px;
+}
+
+.my-div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo dentro de my-div */
+
+	height: 100%;
+}
+
+.span-repit {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+	
+}
+
+.div_chavetao {
+    display: flex; /* Alinha os elementos filhos com flex */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 0;
+	
+}
+
+.span_teste {
+    display: flex;
+    align-items: center; /* Centraliza o caractere verticalmente */
+    justify-content: center; /* Centraliza o caractere horizontalmente */
+    line-height: 1; /* Ajuste conforme necessário */
+	font-family: 'Lucida Console', 'Courier New', Menlo, Monaco, Consolas, monospace;
+	padding-top: 5px;
+	width:35px;
+}
+
+
+
+
+.chavetaodir1x, .chavetaodir2x, .chavetaodir3x, .chavetaodir4x,
+.chavetaodir5x, .chavetaodir6x, .chavetaodir7x, .chavetaodir8x,
+.chavetaodir9x, .chavetaodir10x {
+    color: #3B87B0;
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.chavetaodir1x { font-size: 14px; font-weight: bolder; }
+.chavetaodir2x { font-size: 30px; font-weight: bold; }
+.chavetaodir3x { font-size: 50px; }
+.chavetaodir4x { font-size: 65px; }
+.chavetaodir5x { font-size: 75px; }
+.chavetaodir6x { font-size: 110px; }
+.chavetaodir7x { font-size: 120px; }
+.chavetaodir8x { font-size: 150px; }
+.chavetaodir9x { font-size: 160px; }
+.chavetaodir10x { font-size: 220px; }
+.chavetaodir11x { font-size: 250px; }
+.chavetaodir12x { font-size: 280px; }
+.chavetaodir13x { font-size: 310px; }
+.chavetaodir14x { font-size: 340px; }
+.chavetaodir15x { font-size: 370px; }
+
+.repit {
+    font-size: 20px;
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0 2px; /* Adiciona espaçamento */
+	
+}
+
+
+
+
+/* --- Botôes página principal --- */
+.btn_normal, .btn_reset,
+.btn_seta_top {
+	align-self: center;
+    min-width: 200px;
+    max-width: 200px;
+    margin-top: 5px;
+	margin-bottom: 5px;
+    padding: 5px;
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Botão arredondado */
+    cursor: pointer; /* Ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn_normal:hover, .btn_seta_top:hover, .btn_reset:hover  {
+	transform: scaleX(1.1); /* Leve aumento ao passar o mouse */
+}
+
+/* --- Botão de Scroll Return --- */
+.btn_seta_top {
+    font-size: 24px; /* Tamanho da seta */
+    margin-top: 2px;
+    padding: 0px; /* Sem padding */
+}
+
+.seta-rotator {
+	transform: rotate(-90deg);
+}
+
+.btn_normal:hover {
+    transform: scaleX(1.1); /* Leve aumento ao passar o mouse */
+}
+
+/*--------- Página do Conversor ---------*/
+
+.cvs-container {
+	max-width: 98%;
+	min-height: 600px;
+	margin: 10px auto;
+	padding: 5px;
+	border-radius: 25px;
+	justify-self: center;
+	box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+	width: 600px;
+	padding: 40px;
+}
+
+.cvs-content {
+	display: flex;
+    flex-direction: column;
+	gap: 10px;
+	max-width: inherit;
+	width: 100%;
+}
+
+
+.cvs-container h1 {
+	text-align: center;
+	color: #00509e;
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	
+}
+
+.cvs-section_manual, .cvs-section {
+	display: flex;
+	flex-direction: column; /* Certifica-se de que o conteúdo fique em coluna */
+	text-align: center;
+	align-items: center; /* Centraliza horizontalmente o conteúdo */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+	color: #333;
+	font-size: 18px;
+	margin-bottom: 10px;
+	gap: 10px;
+	max-width: inherit;
+}
+
+.cvs-separator-line{
+	width: 100%;
+}
+
+textarea, pre, input[type="text"], input[type="file"] {
+	width: 100%;
+	min-height: 50px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight:200;
+	border: solid 1px;
+}
+
+textarea {
+	height: 100px;
+	resize: none;
+}
+
+input[type="text"], input[type="file"] {
+	text-align: center;
+	background-color:white;
+	margin: 10px 0;
+}
+
+
+
+/*--------- Área dos Botões do Conversor ---------*/
+.cvs-buttons_row {
+	display: flex;
+	gap: 10px;
+	align-items: center; /* Centraliza horizontalmente o conteúdo */
+	align-content: center;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+	max-width: 100%;
+}
+
+.cvs-btn_pequeno {
+	align-self: center;
+    min-width: 100px;
+    max-width: 200px;
+    margin-top: 5px;
+	margin-bottom: 5px;
+    padding: 5px;
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Botão arredondado */
+    cursor: pointer; /* Ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.cvs-btn_centro {
+	align-self: center;
+    min-width: 300px;
+    max-width: 500px;
+    margin-top: 5px;
+	margin-bottom: 5px;
+    padding: 5px;
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Botão arredondado */
+    cursor: pointer; /* Ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+.cvs-message {
+	text-align: center;
+	font-size: 14px;
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+	width: 100%;
+}
+
+.cvs-message.success {
+	background-color: #28a745;
+	color: white;
+	border: 1px solid #218838;
+}
+
+.cvs-message.error {
+	background-color: #dc3545;
+	color: white;
+	border: 1px solid #c82333;
+}
+
+
+/* --- Responsividade --- */
+@media screen and (max-width: 1485px) {
+
+}
+
+@media screen and (max-width: 700px) {
+/* --------- Área do Card dos Cantos --------- */
+.card-container, .card-container-detalhes {
+	width: 100%;
+	padding: 20px;
+}
+
+.title-container {
+	max-width: 100%;    
+}
+
+}
+
+/* =============== Página de Detalhes dos Pontos =============== */
+.details-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: navy;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+	text-align: center;
+}
+
+.details-link:hover {
+    background-color:#00509e;
+}
+
+
+/* =============== Página do Conversor =============== */
+/* Style tab links */
+.csv-btn_tabs {
+	width: 100%;
+	background-color: rgb(230, 230, 250);
+	display: flex;
+}
+
+.tablink {
+	border-radius: 25px 25px 0px 0px;
+	background-color: rgb(220, 220, 240); /* Cor padrão dos botões */
+	border: none;
+	color: white;
+	float: left;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 100%;
+	border-bottom: solid 1px;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave entre os modos */
+  }
+
+
+.tablink.active {
+    background-color: rgb(230, 230, 250); /* Cor do botão ativo */
+	border-top: solid 1px;
+	border-left: solid 1px;
+	border-right: solid 1px;
+	border-bottom: none;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave entre os modos */
+
+	
+}
+
+.tablink:hover {
+	background-color: rgb(160, 160, 177);
+	transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave entre os modos */
+  }
+
+  
+  /* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+	color: white;
+	display: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 90%;
+  }

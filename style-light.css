@@ -1,0 +1,126 @@
+/* --------- Modo Claro --------- */
+body.light-mode {
+    background-color:#e6f0ff; /* Fundo claro */
+    color: black; /* Texto escuro */
+    color: navy;
+    border-color: navy;
+}
+
+body.light-mode .workarea {
+}
+
+body.light-mode div.header {
+	color: inherit;
+}
+
+body.light-mode .theme-toggle {
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.4);
+    background-color:rgb(219, 219, 219, 0.8);
+}
+
+/* --- Selects --- */
+body.light-mode select {
+	background-color: gainsboro;
+    color: navy;
+}
+/* Estilo quando o usuário passa o cursor (hover) */
+body.light-mode select:hover {
+    border-color: #007bff; /* Cor da borda ao passar o mouse */
+    background-color: #f0f8ff; /* Cor de fundo clara ao passar o mouse */
+    color: #007bff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo quando o select recebe foco (focus) */
+body.light-mode select:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #007bff; /* Cor da borda ao focar */
+    background-color: #e6f0ff; /* Cor de fundo ao focar */
+    color: #007bff; /* Cor do texto ao focar */
+}
+
+/* Estilo para o select quando está desabilitado */
+body.light-mode select:disabled {
+    background-color: #f9f9f9; /* Cor de fundo para quando o select estiver desabilitado */
+    border-color: #ddd; /* Cor da borda quando desabilitado */
+    color: #aaa; /* Cor do texto quando desabilitado */
+    cursor: not-allowed; /* Cursor indicando que não pode interagir */
+}
+
+body.light-mode select option {
+    color: #000; /* Cor do texto das opções */
+    background-color: #fff; /* Cor de fundo das opções */
+}
+
+
+body.light-mode .card-container, body.light-mode .card-container-detalhes,
+body.light-mode .cvs-container {
+    background-color: rgb(230, 230, 250);
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode .card-box {
+    background-color: ghostwhite;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode .title-entidade {
+    color:darkred;
+}
+
+body.light-mode .title-titulo {
+    color:#000;
+}
+
+body.light-mode .card-toque {
+    background-color:cornsilk;
+}
+
+body.light-mode .title-toque {
+    color:darkgoldenrod;
+}
+
+/*--------- Área do Botão ---------*/
+body.light-mode .btn_reset, body.light-mode .btn_normal, 
+body.light-mode .btn_seta_top
+
+{
+    border: solid 2px;
+    border-color:#2c324c;
+    background-color: rgba(0, 0, 128, 0.7); /* Aumenta a opacidade no hover */
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+body.light-mode .btn_reset:hover, body.light-mode .btn_normal:hover, body.light-mode .btn_seta_top:hover {
+    background-color: rgba(0, 0, 128, 0.9); /* Fundo azul com transparência */	
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode .cvs-btn_colar, body.light-mode .cvs-btn_limpar,
+body.light-mode .cvs-btn_converter, body.light-mode .cvs-btn_copiar,
+body.light-mode .cvs-btn_processar {
+    border: solid 2px;
+    border-color:#2c324c;
+    background-color: rgba(0, 0, 128, 0.7); /* Aumenta a opacidade no hover */
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+
+body.light-mode button {
+    color: navy;
+}
+body.light-mode button:active {
+
+}
+
+/* --- Botão de Scroll Return --- */
+
+
+body.light-mode .btn_seta_top {
+    color: greenyellow;
+}
+
+body.light-mode .btn_normal:hover {
+    background-color: rgba(0, 0, 128, 0.9); /* Fundo azul com transparência */	
+}
